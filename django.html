@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Django</title>
-		<meta charset="UTF-8">
-	</head>
-	<body>
+  <head>
+    <title>Django</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
     <header>
       <h1>Python Templating Systems</h1>
       <p>A comparision of several templating systems for Python web development.</p>
@@ -16,15 +16,15 @@
         <a href="./mako.html">Mako</a>
       </nav>
     </header>
-		<section>
-			<h1>Django</h1>
-			<a href="https://www.djangoproject.com/">
-				<img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
-			</a>
-			<p>Django is a web framework that has its own templating system.</p>
-			<h2>Code Sample</h2>
-			<pre>
-				<code>
+    <section>
+      <h1>Django</h1>
+      <a href="https://www.djangoproject.com/">
+        <img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
+      </a>
+      <p>Django is a web framework that has its own templating system.</p>
+      <h2>Code Sample</h2>
+      <pre>
+        <code>
 {% extends &quot;base_generic.html&quot; %}
 
 {% block title %}{{ section.title }}{% endblock %}
@@ -34,16 +34,16 @@
 
 {% for story in story_list %}
 &lt;h2&gt;
-	&lt;a href=&quot;{{ story.get_absolute_url }}&quot;&gt;
-		{{ story.headline|upper }}
-	&lt;/a&gt;
+  &lt;a href=&quot;{{ story.get_absolute_url }}&quot;&gt;
+    {{ story.headline|upper }}
+  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;{{ story.tease|truncatewords:&quot;100&quot; }}&lt;/p&gt;
 {% endfor %}
 {% endblock %}
-				</code>
-			</pre>
-		</section>
+        </code>
+      </pre>
+    </section>
     <footer>
       <div>
         <small>
@@ -57,5 +57,5 @@
         </small>
       </div>
     </footer>
-	</body>
+  </body>
 </html>
