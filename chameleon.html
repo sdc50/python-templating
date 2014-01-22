@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Django</title>
+		<title>Chameleon</title>
 		<meta charset="UTF-8">
 	</head>
 	<body>
@@ -17,32 +17,32 @@
       </nav>
     </header>
 		<section>
-			<h1>Django</h1>
-			<a href="https://www.djangoproject.com/">
-				<img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
-			</a>
-			<p>Django is a web framework that has its own templating system.</p>
-			<h2>Code Sample</h2>
-			<pre>
-				<code>
-{% extends &quot;base_generic.html&quot; %}
-
-{% block title %}{{ section.title }}{% endblock %}
-
-{% block content %}
-&lt;h1&gt;{{ section.title }}&lt;/h1&gt;
-
-{% for story in story_list %}
-&lt;h2&gt;
-	&lt;a href=&quot;{{ story.get_absolute_url }}&quot;&gt;
-		{{ story.headline|upper }}
-	&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;{{ story.tease|truncatewords:&quot;100&quot; }}&lt;/p&gt;
-{% endfor %}
-{% endblock %}
-				</code>
-			</pre>
+		  <div>
+  			<h1>Chameleon</h1>
+  			<a href="http://chameleon.readthedocs.org/en/latest//index.html#">Chameleon</a>
+  			<p>Chameleon is an HTML/XML template engine for Python that uses the <em>page templates</em> language created by Zope.</p>
+  		</div>
+  		<div>
+  			<h2>Code Sample</h2>
+  			<div>
+    			<pre>
+    				<code>
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, ${'world'}!&lt;/h1&gt;
+    &lt;table&gt;
+      &lt;tr tal:repeat=&quot;row 'apple', 'banana', 'pineapple'&quot;&gt;
+        &lt;td tal:repeat=&quot;col 'juice', 'muffin', 'pie'&quot;&gt;
+           ${row.capitalize()} ${col}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    				</code>
+    			</pre>
+  			</div>
+			</div>
 		</section>
     <footer>
       <div>

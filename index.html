@@ -12,7 +12,6 @@
 				<a href="./index.html">Overview</a>
 				<a href="./django.html">Django</a>
 				<a href="./jinja2.html">Jinja2</a>
-				<a href="./genshi.html">Genshi</a>
 				<a href="./chameleon.html">Chameleon</a>
 				<a href="./mako.html">Mako</a>
 			</nav>
@@ -39,6 +38,12 @@
   				  A framework may have its own templating system (like Django), or may allow configuration to work with a number
   				  of templating systems (like Pyramid).
   				</p>
+  				<p>
+  				  Templating systems can be either server-side, or client-side.  A server-side templating system renders the template
+  				  on the server an returns a finished HTML document to the browser.  A client-side templating system sends the data and
+  				  the template to the browser. The template is then rendared by the browser using JavaScript or an XSLT stylesheet.
+  				  All the templating systems reviewed here are server-side.
+  				</p>
 				</div>
 				<div>
   				<figure>
@@ -49,12 +54,15 @@
 			</div>
 			<div>
 				<h2>Features of Templating Systems</h2>
-				<ul>
-					<li><a href="#variables_heading">Variables</a></li>
-					<li><a href="#filters_heading">Filters</a></li>
-					<li><a href="#expressions_heading">Logic Expressions</a></li>
-					<li><a href="#inheritance_heading">Inheritance</a></li>
-				</ul>
+				<div>
+				  <p>Most templating systems provide the follwing features:</p>
+  				<ul>
+  					<li><a href="#variables_heading">Variables</a></li>
+  					<li><a href="#filters_heading">Filters</a></li>
+  					<li><a href="#expressions_heading">Logic Expressions</a></li>
+  					<li><a href="#inheritance_heading">Inheritance</a></li>
+  				</ul>
+  		  </div>
 				<div>
 					<h3><a id="variables_heading">Variables</a></h3>
 					<p>
@@ -71,7 +79,9 @@
 				</div>
 				<div>
 					<h3><a id="expressions_heading">Expressions</a></h3>
-					<p>Expressions are great</p>
+					<p>
+					  Logic expressions control the flow using control structures like for loops and if statements.
+					</p>
 					<p>
 					  This is some discussion about whether templates should contain any logic. In a traditional 
 					  model-view-controller architechture the view should be independant of buisness logic. However,
@@ -87,7 +97,12 @@
 				</div>
 				<div>
 					<h3><a id="inheritance_heading">Inheritance</a></h3>
-					<p>Inheritance is great</p>
+					<p>
+					  Inheritance is one of the most powerful aspects of templating.  It allows templates to be stacked, meaning one
+					  template can build upon another. The provides a great mechanism for not repeating code. A base template can be made 
+					  which contains the header and footer that will remain consistent througthout the site.  Other templates can then
+					  inherit from the base template and add content into &quot;blocks&quot; that are defined in the base. 
+          </p>
 				</div>
 			</div>
 		</section>
@@ -100,7 +115,7 @@
 					<th>Templating Language</th>
 					<th>Variables</th>
 					<th>Filters</th>
-					<th>Expressions</th>
+					<th>Logic Expressions</th>
 					<th>Inheritance</th>
 				</thead>
 				<tr>
@@ -109,6 +124,10 @@
 							<img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
 						</a>
 					</td>
+					<td>yes</td>
+					<td>yes</td>
+					<td>yes</td>
+					<td>yes</td>
 				</tr>
 				<tr>
 					<td>
@@ -116,34 +135,46 @@
 							<img src="http://jinja.pocoo.org/static/jinja.png" alt="Jinja2">
 						</a>
 					</td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="http://genshi.edgewall.org/">
-							<img src="http://www.edgewall.org/gfx/genshi_logo.png" alt="Genshi">
-						</a>
+						<a href="http://chameleon.readthedocs.org/en/latest//index.html#">Chameleon</a>
 					</td>
+					<td>yes</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>partial</td>
 				</tr>
 				<tr>
 					<td>
-						<a href="http://genshi.edgewall.org/">Chameleon</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<a href="http://genshi.edgewall.org/">
+						<a href="http://www.makotemplates.org/">
 							<img src="http://www.makotemplates.org/images/makoLogo.png" alt="Mako">
 						</a>
 					</td>
+					<td>yes</td>
+          <td>partial</td>
+          <td>yes</td>
+          <td>yes</td>
 				</tr>
 			</table>
 		</section>
-		<section></section>
+		
 		<footer>
-			<small>This page was created by me.</small>
+		  <div>
+        <small>
+          <h1>About</h1>
+          This site was created as an assignment for the IS 542 class at Brigham Young University.
+        </small>
+      </div>
+		  <div>
+  			<small>
+  			  Copyright © by Scott Christensen. All rights reserved.
+  			</small>
+  		</div>
 		</footer>
 	</body>
 </html>
