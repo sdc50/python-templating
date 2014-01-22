@@ -1,10 +1,149 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Python Templating Engines</title>
+		<title>Python Templating Systems</title>
 		<meta charset="UTF-8">
 	</head>
 	<body>
+		<header>
+			<h1>Python Templating Systems</h1>
+			<p>A comparision of several templating systems for Python web development.</p>
+			<nav>
+				<a href="./index.html">Overview</a>
+				<a href="./django.html">Django</a>
+				<a href="./jinja2.html">Jinja2</a>
+				<a href="./genshi.html">Genshi</a>
+				<a href="./chameleon.html">Chameleon</a>
+				<a href="./mako.html">Mako</a>
+			</nav>
+		</header>
 		
+		<!-- Overview of templating -->
+		<section>
+			<h1>Overview of Templating Systems</h1>
+			<div>
+				<h2>What is Templating?</h2>
+				<div>
+  				<p>
+  				  A template just a text file. A template contains templating code (i.e. variables and/or logic expressions), 
+  				  which get replaced with other data (usually stored in a database) when the template is rendered. 
+  				  For web templating is normally used with HTML files.
+  				  The rendered template is a finished HTML page that can be served to a client.
+  			  </p>
+  			  <p>
+            Templates can be compared to a form letter. A web templating system uses the &quot;form letter&quot; to either
+            generate a large number in static pages in advance, or to dynamically produce web pages on demand.
+          </p>
+  				<p>
+  				  Templates are rendared using a template engine. Python templating systems are used within Python web frameworks.
+  				  A framework may have its own templating system (like Django), or may allow configuration to work with a number
+  				  of templating systems (like Pyramid).
+  				</p>
+				</div>
+				<div>
+  				<figure>
+  				   <img src="http://upload.wikimedia.org/wikipedia/en/thumb/a/a2/TempEngWeb016.svg/440px-TempEngWeb016.svg.png" alt="" >
+  				   <figcaption>Fig1. - Diagram of a server-side web templating system: content is rendered using a display format (template) to produce finished web pages.</figcaption>
+  				</figure>
+				</div>
+			</div>
+			<div>
+				<h2>Features of Templating Systems</h2>
+				<ul>
+					<li><a href="#variables_heading">Variables</a></li>
+					<li><a href="#filters_heading">Filters</a></li>
+					<li><a href="#expressions_heading">Logic Expressions</a></li>
+					<li><a href="#inheritance_heading">Inheritance</a></li>
+				</ul>
+				<div>
+					<h3><a id="variables_heading">Variables</a></h3>
+					<p>
+					  Variables are the simplest and most fundamental aspect of templates. A template variable is simply a value that 
+					  is passed to the template. The value is then substituded wherever the variable name is found.
+					</p>
+					<!-- TODO: add example of variable and how it is rendered -->
+				</div>
+				<div>
+					<h3><a id="filters_heading">Filters</a></h3>
+					<p>
+					  Filters are a way of modifying variables. Filters can be used to change the format of a variable, or to access its attributes.
+					</p>
+				</div>
+				<div>
+					<h3><a id="expressions_heading">Expressions</a></h3>
+					<p>Expressions are great</p>
+					<p>
+					  This is some discussion about whether templates should contain any logic. In a traditional 
+					  model-view-controller architechture the view should be independant of buisness logic. However,
+					  there is some logic which is inherent to the view, and templating system which provides syntax for
+					  control statements can be very userful.
+					  The documentation for Jinja2 sees it this way:
+					</p>
+					<blockquote>
+					  &quot;Without a doubt you should try to remove as much logic from templates as possible. 
+					  But templates without any logic mean that you have to do all the processing in the code which is boring and 
+					  stupid. . . So some amount of logic is required in templates to keep everyone happy.&quot;
+					</blockquote>
+				</div>
+				<div>
+					<h3><a id="inheritance_heading">Inheritance</a></h3>
+					<p>Inheritance is great</p>
+				</div>
+			</div>
+		</section>
+		 
+		<!-- Comparison of Templating -->
+		<section>
+			<h1>Comparison of Templating Languages</h1>
+			<table>
+				<thead>
+					<th>Templating Language</th>
+					<th>Variables</th>
+					<th>Filters</th>
+					<th>Expressions</th>
+					<th>Inheritance</th>
+				</thead>
+				<tr>
+					<td>
+						<a href="https://www.djangoproject.com/">
+							<img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://jinja.pocoo.org/">
+							<img src="http://jinja.pocoo.org/static/jinja.png" alt="Jinja2">
+						</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://genshi.edgewall.org/">
+							<img src="http://www.edgewall.org/gfx/genshi_logo.png" alt="Genshi">
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://genshi.edgewall.org/">Chameleon</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://genshi.edgewall.org/">
+							<img src="http://www.makotemplates.org/images/makoLogo.png" alt="Mako">
+						</a>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section></section>
+		<footer>
+			<small>This page was created by me.</small>
+		</footer>
 	</body>
 </html>
