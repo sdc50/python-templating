@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Python Templating Systems</title>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<header>
-			<h1>Python Templating Systems</h1>
-			<p>A comparision of several templating systems for Python web development.</p>
-			<nav>
-				<a href="./index.html">Overview</a>
-				<a href="./django.html">Django</a>
-				<a href="./jinja2.html">Jinja2</a>
-				<a href="./chameleon.html">Chameleon</a>
-				<a href="./mako.html">Mako</a>
-			</nav>
-		</header>
-		
-		<!-- Overview of templating -->
-		<section>
-			<h1>Overview of Templating Systems</h1>
-			<div>
-				<h2>What is Templating?</h2>
-				<div>
+  <head>
+    <title>Python Templating Systems</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h1>Python Templating Systems</h1>
+      <p>A comparision of several templating systems for Python web development.</p>
+      <nav>
+        <a href="./index.html">Overview</a>
+        <a href="./django.html">Django</a>
+        <a href="./jinja2.html">Jinja2</a>
+        <a href="./chameleon.html">Chameleon</a>
+        <a href="./mako.html">Mako</a>
+      </nav>
+    </header>
+    
+    <!-- Overview of templating -->
+    <section>
+      <h1>Overview of Templating Systems</h1>
+      <div>
+        <h2>What is Templating?</h2>
+        <div>
           <p>
             A template just a text file. A template contains templating code (i.e. variables and/or logic expressions), 
             which get replaced with other data (usually stored in a database) when the template is rendered. 
@@ -44,137 +44,137 @@
             the template to the browser. The template is then rendared by the browser using JavaScript or an XSLT stylesheet.
             All the templating systems reviewed here are server-side.
           </p>
-				</div>
-				<div>
-  				<figure>
-  				   <img src="http://upload.wikimedia.org/wikipedia/en/thumb/a/a2/TempEngWeb016.svg/440px-TempEngWeb016.svg.png" alt="" >
-  				   <figcaption>Fig1. - Diagram of a server-side web templating system: content is rendered using a display format (template) to produce finished web pages.</figcaption>
-  				</figure>
-				</div>
-			</div>
-			<div>
-				<h2>Features of Templating Systems</h2>
-				<div>
-				  <p>Most templating systems provide the follwing features:</p>
-  				<ul>
-  					<li><a href="#variables_heading">Variables</a></li>
-  					<li><a href="#filters_heading">Filters</a></li>
-  					<li><a href="#expressions_heading">Logic Expressions</a></li>
-  					<li><a href="#inheritance_heading">Inheritance</a></li>
-  				</ul>
-  		  </div>
-				<div>
-					<h3><a id="variables_heading">Variables</a></h3>
-					<p>
-					  Variables are the simplest and most fundamental aspect of templates. A template variable is simply a value that 
-					  is passed to the template. The value is then substituded wherever the variable name is found.
-					</p>
-					<!-- TODO: add example of variable and how it is rendered -->
-				</div>
-				<div>
-					<h3><a id="filters_heading">Filters</a></h3>
-					<p>
-					  Filters are a way of modifying variables. Filters can be used to change the format of a variable, or to access its attributes.
-					</p>
-				</div>
-				<div>
-					<h3><a id="expressions_heading">Expressions</a></h3>
-					<p>
-					  Logic expressions control the flow using control structures like for loops and if statements.
-					</p>
-					<p>
-					  This is some discussion about whether templates should contain any logic. In a traditional 
-					  model-view-controller architechture the view should be independant of buisness logic. However,
-					  there is some logic which is inherent to the view, and templating system which provides syntax for
-					  control statements can be very userful.
-					  The documentation for Jinja2 sees it this way:
-					</p>
-					<blockquote>
-					  &quot;Without a doubt you should try to remove as much logic from templates as possible. 
-					  But templates without any logic mean that you have to do all the processing in the code which is boring and 
-					  stupid. . . So some amount of logic is required in templates to keep everyone happy.&quot;
-					</blockquote>
-				</div>
-				<div>
-					<h3><a id="inheritance_heading">Inheritance</a></h3>
+        </div>
+        <div>
+          <figure>
+             <img src="http://upload.wikimedia.org/wikipedia/en/thumb/a/a2/TempEngWeb016.svg/440px-TempEngWeb016.svg.png" alt="" >
+             <figcaption>Fig1. - Diagram of a server-side web templating system: content is rendered using a display format (template) to produce finished web pages.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <h2>Features of Templating Systems</h2>
+        <div>
+          <p>Most templating systems provide the follwing features:</p>
+          <ul>
+            <li><a href="#variables_heading">Variables</a></li>
+            <li><a href="#filters_heading">Filters</a></li>
+            <li><a href="#expressions_heading">Logic Expressions</a></li>
+            <li><a href="#inheritance_heading">Inheritance</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3><a id="variables_heading">Variables</a></h3>
+          <p>
+            Variables are the simplest and most fundamental aspect of templates. A template variable is simply a value that 
+            is passed to the template. The value is then substituded wherever the variable name is found.
+          </p>
+          <!-- TODO: add example of variable and how it is rendered -->
+        </div>
+        <div>
+          <h3><a id="filters_heading">Filters</a></h3>
+          <p>
+            Filters are a way of modifying variables. Filters can be used to change the format of a variable, or to access its attributes.
+          </p>
+        </div>
+        <div>
+          <h3><a id="expressions_heading">Expressions</a></h3>
+          <p>
+            Logic expressions control the flow using control structures like for loops and if statements.
+          </p>
+          <p>
+            This is some discussion about whether templates should contain any logic. In a traditional 
+            model-view-controller architechture the view should be independant of buisness logic. However,
+            there is some logic which is inherent to the view, and templating system which provides syntax for
+            control statements can be very userful.
+            The documentation for Jinja2 sees it this way:
+          </p>
+          <blockquote>
+            &quot;Without a doubt you should try to remove as much logic from templates as possible. 
+            But templates without any logic mean that you have to do all the processing in the code which is boring and 
+            stupid. . . So some amount of logic is required in templates to keep everyone happy.&quot;
+          </blockquote>
+        </div>
+        <div>
+          <h3><a id="inheritance_heading">Inheritance</a></h3>
           <p>
             Inheritance is one of the most powerful aspects of templating.  It allows templates to be stacked, meaning one
             template can build upon another. The provides a great mechanism for not repeating code. A base template can be made 
             which contains the header and footer that will remain consistent througthout the site.  Other templates can then
             inherit from the base template and add content into &quot;blocks&quot; that are defined in the base. 
           </p>
-				</div>
-			</div>
-		</section>
-		 
-		<!-- Comparison of Templating -->
-		<section>
-			<h1>Comparison of Templating Languages</h1>
-			<table>
-				<thead>
-					<th>Templating Language</th>
-					<th>Variables</th>
-					<th>Filters</th>
-					<th>Logic Expressions</th>
-					<th>Inheritance</th>
-				</thead>
-				<tr>
+        </div>
+      </div>
+    </section>
+     
+    <!-- Comparison of Templating -->
+    <section>
+      <h1>Comparison of Templating Languages</h1>
+      <table>
+        <thead>
+          <th>Templating Language</th>
+          <th>Variables</th>
+          <th>Filters</th>
+          <th>Logic Expressions</th>
+          <th>Inheritance</th>
+        </thead>
+        <tr>
         <td>
-        	<a href="https://www.djangoproject.com/">
-        		<img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
-        	</a>
+          <a href="https://www.djangoproject.com/">
+            <img src="https://www.djangoproject.com/s/img/site/hdr_logo.b19c5e60269d.gif" alt="Django">
+          </a>
         </td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
         <td>yes</td>
-				</tr>
-				<tr>
+        </tr>
+        <tr>
           <td>
-          	<a href="http://jinja.pocoo.org/">
-          		<img src="http://jinja.pocoo.org/static/jinja.png" alt="Jinja2">
-          	</a>
+            <a href="http://jinja.pocoo.org/">
+              <img src="http://jinja.pocoo.org/static/jinja.png" alt="Jinja2">
+            </a>
           </td>
           <td>yes</td>
           <td>yes</td>
           <td>yes</td>
           <td>yes</td>
-				</tr>
-				<tr>
+        </tr>
+        <tr>
           <td>
-          	<a href="http://chameleon.readthedocs.org/en/latest//index.html#">Chameleon</a>
+            <a href="http://chameleon.readthedocs.org/en/latest//index.html#">Chameleon</a>
           </td>
           <td>yes</td>
           <td>yes</td>
           <td>yes</td>
           <td>partial</td>
-				</tr>
-				<tr>
+        </tr>
+        <tr>
           <td>
-          	<a href="http://www.makotemplates.org/">
-          		<img src="http://www.makotemplates.org/images/makoLogo.png" alt="Mako">
-          	</a>
+            <a href="http://www.makotemplates.org/">
+              <img src="http://www.makotemplates.org/images/makoLogo.png" alt="Mako">
+            </a>
           </td>
           <td>yes</td>
           <td>partial</td>
           <td>yes</td>
           <td>yes</td>
-				</tr>
-			</table>
-		</section>
-		
-		<footer>
-		  <div>
+        </tr>
+      </table>
+    </section>
+    
+    <footer>
+      <div>
         <small>
           <h1>About</h1>
           This site was created as an assignment for the IS 542 class at Brigham Young University.
         </small>
       </div>
-		  <div>
-  			<small>
-  			  Copyright © by Scott Christensen. All rights reserved.
-  			</small>
-  		</div>
-		</footer>
-	</body>
+      <div>
+        <small>
+          Copyright © by Scott Christensen. All rights reserved.
+        </small>
+      </div>
+    </footer>
+  </body>
 </html>
