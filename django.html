@@ -30,22 +30,22 @@
       <h2>Code Sample</h2>
       <div class="code_sample">
         <code>
-<pre><span class="token">{%</span> extends &quot;base_generic.html&quot; <span class="token">%}</span>
+<pre><span class="token">{%</span> <span class="key_word">extends</span> <span class="code">&quot;base_generic.html&quot;</span> <span class="token">%}</span>
 
-<span class="token">{%</span> block title <span class="token">%}{{</span> section.title <span class="token">}}{%</span> endblock <span class="token">%}</span>
+<span class="token">{%</span> <span class="key_word">block</span> <span class="code">title</span> <span class="token">%}{{</span> <span class="code">section.title</span> <span class="token">}}{%</span> <span class="key_word">endblock</span> <span class="token">%}</span>
 
-<span class="token">{%</span> block content <span class="token">%}</span>
-&lt;h1&gt;<span class="token">{{</span> section.title <span class="token">}}</span>&lt;/h1&gt;
+<span class="token">{%</span> <span class="key_word">block</span> <span class="code">content</span> <span class="token">%}</span>
+&lt;h1&gt;<span class="token">{{</span> <span class="code">section.title</span> <span class="token">}}</span>&lt;/h1&gt;
 
-<span class="token">{%</span> for story in story_list <span class="token">%}</span>
+<span class="token">{%</span> <span class="key_word">for</span> <span class="code">story</span> <span class="key_word">in</span> <span class="code">story_list</span> <span class="token">%}</span>
 &lt;h2&gt;
-  &lt;a href=&quot;<span class="token">{{</span> story.get_absolute_url <span class="token">}}</span>&quot;&gt;
-    <span class="token">{{</span> story.headline|upper <span class="token">}}</span>
+  &lt;a href=&quot;<span class="token">{{</span> <span class="code">story.get_absolute_url</span> <span class="token">}}</span>&quot;&gt;
+    <span class="token">{{</span> <span class="code">story.headline</span>|<span class="key_word">upper</span> <span class="token">}}</span>
   &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;<span class="token">{{</span> story.tease|truncatewords:&quot;100&quot; <span class="token">}}</span>lt;/p&gt;
-<span class="token">{%</span> endfor <span class="token">%}</span>
-<span class="token">{%</span> endblock <span class="token">%}</span></pre>
+&lt;p&gt;<span class="token">{{</span> <span class="code">story.tease</span>|<span class="key_word">truncatewords</span><span class="code">:&quot;100&quot;</span> <span class="token">}}</span>&lt;/p&gt;
+<span class="token">{%</span> <span class="key_word">endfor</span> <span class="token">%}</span>
+<span class="token">{%</span> <span class="key_word">endblock</span> <span class="token">%}</span></pre>
         </code>
       </div>
     </section>

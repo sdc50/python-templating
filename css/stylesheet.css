@@ -18,6 +18,7 @@ header{
 
 header h1{
   margin: 0;
+  padding: 10px;
   color: -webkit-linear-gradient(#3670A0, #3C83BC);
   color: linear-gradient(#3670A0, #3C83BC); /* Standard syntax */
   color: #3670A0;
@@ -26,6 +27,8 @@ header h1{
 }
 
 header p{
+  margin: 0;
+  padding: 10px;
   text-shadow: 0 1px #FFFFFF;
 }
 nav{
@@ -47,7 +50,7 @@ nav a:hover{color: #3670A0}
 nav a:active{color: #3670A0}
 
 nav div a:first-child{
-  padding-left: 0;
+  padding-left: 10px;
 }
 
 section{
@@ -116,7 +119,7 @@ ul li a:visited{color: #3670A0}
 table{
   padding: 10px;
   display: inline-block;
-  margin: 0 auto;
+  margin: 20px auto;
   border-collapse: collapse;
 }
 
@@ -131,7 +134,7 @@ td{
 
 td img{
   width:50%;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 
@@ -181,11 +184,21 @@ footer h1{
 }
 
 @media (max-width: 600px){
+  header p{
+    display: none;
+  }
+  nav a{
+    display:block;
+    padding-left:10px;
+  }
   .main-left{
     width: 100%;
   }
   .main-right{
     display: inline;
     width: 100%;
+  }
+  section h1{
+    font-size:30px;
   }
 }

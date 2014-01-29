@@ -35,7 +35,7 @@
           <code>
 <pre><span class="token">&lt;%</span><span class="key_word">inherit</span> <span class="code">file=&quot;base.html&quot;</span><span class="token">/&gt;</span>
 <span class="token">&lt;%</span>
-    rows = [[v <span class="key_word">for</span> v <span class="key_word">in range</span>0,10)] <span class="key_word">for</span> row <span class="key_word">in range</span>0,10)]
+    rows = [[v <span class="key_word">for</span> v <span class="key_word">in range</span>(0,10)] <span class="key_word">for</span> row <span class="key_word">in range</span>(0,10)]
 <span class="token">%&gt;</span>
 &lt;table&gt;
     <span class="token">%</span> <span class="key_word">for</span> row <span class="key_word">in</span> rows:

@@ -29,23 +29,21 @@
       </div>
       <div>
         <h2>Code Sample</h2>
-        <div>
-          <pre>
+        <div class="code_sample">
             <code>
-&lt;html&gt;
+<pre>&lt;html&gt;
   &lt;body&gt;
-    &lt;h1&gt;Hello, ${'world'}!&lt;/h1&gt;
+    &lt;h1&gt;Hello, <span class="token">${</span>'world'<span class="token">}</span>!&lt;/h1&gt;
     &lt;table&gt;
-      &lt;tr tal:repeat=&quot;row 'apple', 'banana', 'pineapple'&quot;&gt;
-        &lt;td tal:repeat=&quot;col 'juice', 'muffin', 'pie'&quot;&gt;
-           ${row.capitalize()} ${col}
+      &lt;tr <span class="key_word">tal:repeat=</span><span class="code">&quot;row 'apple', 'banana', 'pineapple'&quot;</span>&gt;
+        &lt;td <span class="key_word">tal:repeat=</span><span class="code">&quot;col 'juice', 'muffin', 'pie'&quot;</span>&gt;
+           <span class="token">${</span><span class="code">row.capitalize()</span><span class="token">} ${</span><span class="code">col</span><span class="token">}</span>
         &lt;/td&gt;
       &lt;/tr&gt;
     &lt;/table&gt;
   &lt;/body&gt;
-&lt;/html&gt;
+&lt;/html&gt;</pre>
             </code>
-          </pre>
         </div>
       </div>
     </section>
