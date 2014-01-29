@@ -3,17 +3,22 @@
   <head>
     <title>Mako</title>
     <meta charset="UTF-8">
+    <link href="./css/stylesheet.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Python Templating Systems</h1>
-      <p>A comparision of several templating systems for Python web development.</p>
+      <div class="content">
+        <h1>Python Templating Systems</h1>
+        <p>A comparision of several templating systems for Python web development.</p>
+      </div>
       <nav>
-        <a href="./index.html">Overview</a>
-        <a href="./django.html">Django</a>
-        <a href="./jinja2.html">Jinja2</a>
-        <a href="./chameleon.html">Chameleon</a>
-        <a href="./mako.html">Mako</a>
+        <div class="content">
+          <a href="./index.html" class="active">Overview</a>
+          <a href="./django.html">Django</a>
+          <a href="./jinja2.html">Jinja2</a>
+          <a href="./chameleon.html">Chameleon</a>
+          <a href="./mako.html">Mako</a>
+        </div>
       </nav>
     </header>
     <section>
@@ -26,42 +31,42 @@
       </div>
       <div>
         <h2>Code Sample</h2>
-        <div>
-          <pre>
-            <code>
-&lt;%inherit file=&quot;base.html&quot;/&gt;
-&lt;%
-    rows = [[v for v in range(0,10)] for row in range(0,10)]
-%&gt;
+        <div class="code_sample">
+          <code>
+<pre><span class="token">&lt;%</span><span class="key_word">inherit</span> <span class="code">file=&quot;base.html&quot;</span><span class="token">/&gt;</span>
+<span class="token">&lt;%</span>
+    rows = [[v <span class="key_word">for</span> v <span class="key_word">in range</span>0,10)] <span class="key_word">for</span> row <span class="key_word">in range</span>0,10)]
+<span class="token">%&gt;</span>
 &lt;table&gt;
-    % for row in rows:
-        ${makerow(row)}
-    % endfor
+    <span class="token">%</span> <span class="key_word">for</span> row <span class="key_word">in</span> rows:
+        <span class="token">${</span>makerow(row)<span class="token">}</span>
+    <span class="token">%</span> <span class="key_word">endfor</span>
 &lt;/table&gt;
 
-&lt;%def name=&quot;makerow(row)&quot;&gt;
+<span class="token">&lt;%</span><span class="key_word">def</span> <span class="code">name=&quot;makerow(row)&quot;</span><span class="token">&gt;</span>
     &lt;tr&gt;
-    % for name in row:
-        &lt;td&gt;${name}&lt;/td&gt;\
-    % endfor
+    <span class="token">%</span> <span class="key_word">for</span> name <span class="key_word">in</span> row:
+        &lt;td&gt;<span class="token">${</span>name<span class="token">}</span>&lt;/td&gt;\
+    <span class="token">%</span> <span class="key_word">endfor</span>
     &lt;/tr&gt;
-&lt;/%def&gt;
-            </code>
-          </pre>
+<span class="token">&lt;/%</span><span class="key_word">def</span><span class="token">&gt;</span></pre>
+          </code>
         </div>
       </div>
     </section>
     <footer>
-      <div>
-        <small>
-          <h1>About</h1>
-          This site was created as an assignment for the IS 542 class at Brigham Young University.
-        </small>
-      </div>
-      <div>
-        <small>
-          Copyright © by Scott Christensen. All rights reserved.
-        </small>
+      <div class="content">
+        <div>
+          <small>
+            <h1>About</h1>
+            This site was created as an assignment for the IS 542 class at Brigham Young University.
+          </small>
+        </div>
+        <div>
+          <small>
+            Copyright © by Scott Christensen. All rights reserved.
+          </small>
+        </div>
       </div>
     </footer>
   </body>

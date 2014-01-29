@@ -3,17 +3,22 @@
   <head>
     <title>Django</title>
     <meta charset="UTF-8">
+    <link href="./css/stylesheet.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Python Templating Systems</h1>
-      <p>A comparision of several templating systems for Python web development.</p>
+      <div class="content">
+        <h1>Python Templating Systems</h1>
+        <p>A comparision of several templating systems for Python web development.</p>
+      </div>
       <nav>
-        <a href="./index.html">Overview</a>
-        <a href="./django.html">Django</a>
-        <a href="./jinja2.html">Jinja2</a>
-        <a href="./chameleon.html">Chameleon</a>
-        <a href="./mako.html">Mako</a>
+        <div class="content">
+          <a href="./index.html" class="active">Overview</a>
+          <a href="./django.html">Django</a>
+          <a href="./jinja2.html">Jinja2</a>
+          <a href="./chameleon.html">Chameleon</a>
+          <a href="./mako.html">Mako</a>
+        </div>
       </nav>
     </header>
     <section>
@@ -23,38 +28,40 @@
       </a>
       <p>Django is a web framework that has its own templating system.</p>
       <h2>Code Sample</h2>
-      <pre>
+      <div class="code_sample">
         <code>
-{% extends &quot;base_generic.html&quot; %}
+<pre><span class="token">{%</span> extends &quot;base_generic.html&quot; <span class="token">%}</span>
 
-{% block title %}{{ section.title }}{% endblock %}
+<span class="token">{%</span> block title <span class="token">%}{{</span> section.title <span class="token">}}{%</span> endblock <span class="token">%}</span>
 
-{% block content %}
-&lt;h1&gt;{{ section.title }}&lt;/h1&gt;
+<span class="token">{%</span> block content <span class="token">%}</span>
+&lt;h1&gt;<span class="token">{{</span> section.title <span class="token">}}</span>&lt;/h1&gt;
 
-{% for story in story_list %}
+<span class="token">{%</span> for story in story_list <span class="token">%}</span>
 &lt;h2&gt;
-  &lt;a href=&quot;{{ story.get_absolute_url }}&quot;&gt;
-    {{ story.headline|upper }}
+  &lt;a href=&quot;<span class="token">{{</span> story.get_absolute_url <span class="token">}}</span>&quot;&gt;
+    <span class="token">{{</span> story.headline|upper <span class="token">}}</span>
   &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;{{ story.tease|truncatewords:&quot;100&quot; }}&lt;/p&gt;
-{% endfor %}
-{% endblock %}
+&lt;p&gt;<span class="token">{{</span> story.tease|truncatewords:&quot;100&quot; <span class="token">}}</span>lt;/p&gt;
+<span class="token">{%</span> endfor <span class="token">%}</span>
+<span class="token">{%</span> endblock <span class="token">%}</span></pre>
         </code>
-      </pre>
+      </div>
     </section>
     <footer>
-      <div>
-        <small>
-          <h1>About</h1>
-          This site was created as an assignment for the IS 542 class at Brigham Young University.
-        </small>
-      </div>
-      <div>
-        <small>
-          Copyright © by Scott Christensen. All rights reserved.
-        </small>
+      <div class="content">
+        <div>
+          <small>
+            <h1>About</h1>
+            This site was created as an assignment for the IS 542 class at Brigham Young University.
+          </small>
+        </div>
+        <div>
+          <small>
+            Copyright © by Scott Christensen. All rights reserved.
+          </small>
+        </div>
       </div>
     </footer>
   </body>

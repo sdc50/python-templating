@@ -3,17 +3,22 @@
   <head>
     <title>Python Templating Systems</title>
     <meta charset="UTF-8">
+    <link href="./css/stylesheet.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Python Templating Systems</h1>
-      <p>A comparision of several templating systems for Python web development.</p>
+      <div class="content">
+        <h1>Python Templating Systems</h1>
+        <p>A comparision of several templating systems for Python web development.</p>
+      </div>
       <nav>
-        <a href="./index.html">Overview</a>
-        <a href="./django.html">Django</a>
-        <a href="./jinja2.html">Jinja2</a>
-        <a href="./chameleon.html">Chameleon</a>
-        <a href="./mako.html">Mako</a>
+        <div class="content">
+          <a href="./index.html" class="active">Overview</a>
+          <a href="./django.html">Django</a>
+          <a href="./jinja2.html">Jinja2</a>
+          <a href="./chameleon.html">Chameleon</a>
+          <a href="./mako.html">Mako</a>
+        </div>
       </nav>
     </header>
     
@@ -22,9 +27,9 @@
       <h1>Overview of Templating Systems</h1>
       <div>
         <h2>What is Templating?</h2>
-        <div>
+        <div class="main-left">
           <p>
-            A template just a text file. A template contains templating code (i.e. variables and/or logic expressions), 
+            A template is just a text file. A template contains templating code (i.e. variables and/or logic expressions), 
             which get replaced with other data (usually stored in a database) when the template is rendered. 
             For web templating is normally used with HTML files.
             The rendered template is a finished HTML page that can be served to a client.
@@ -45,7 +50,7 @@
             All the templating systems reviewed here are server-side.
           </p>
         </div>
-        <div>
+        <div class="main-right">
           <figure>
              <img src="http://upload.wikimedia.org/wikipedia/en/thumb/a/a2/TempEngWeb016.svg/440px-TempEngWeb016.svg.png" alt="" >
              <figcaption>Fig1. - Diagram of a server-side web templating system: content is rendered using a display format (template) to produce finished web pages.</figcaption>
@@ -142,7 +147,9 @@
         </tr>
         <tr>
           <td>
-            <a href="http://chameleon.readthedocs.org/en/latest//index.html#">Chameleon</a>
+            <a href="http://chameleon.readthedocs.org/en/latest//index.html#" class="Chameleon">
+              <img src="./css/chameleon.png" alt="Chameleon">
+            </a>
           </td>
           <td>yes</td>
           <td>yes</td>
@@ -164,16 +171,18 @@
     </section>
     
     <footer>
-      <div>
-        <small>
-          <h1>About</h1>
-          This site was created as an assignment for the IS 542 class at Brigham Young University.
-        </small>
-      </div>
-      <div>
-        <small>
-          Copyright © by Scott Christensen. All rights reserved.
-        </small>
+      <div class="content">
+        <div>
+          <small>
+            <h1>About</h1>
+            This site was created as an assignment for the IS 542 class at Brigham Young University.
+          </small>
+        </div>
+        <div>
+          <small>
+            Copyright © by Scott Christensen. All rights reserved.
+          </small>
+        </div>
       </div>
     </footer>
   </body>
