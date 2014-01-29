@@ -171,7 +171,7 @@ body:nth-last-child(1){
 }
 
 footer{
-  padding: 10px;
+  padding: 10px 0;
   color: #717171;
   font-family:"Arial Narrow", Arial, sans-serif;
   background-color: #E9E9E9;
