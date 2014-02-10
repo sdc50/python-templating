@@ -9,7 +9,7 @@ body{
 }
 
 .content{
-  max-width: 1000px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -25,8 +25,6 @@ header{
 header h1{
   margin: 0;
   padding: 10px;
-  color: -webkit-linear-gradient(#3670A0, #3C83BC);
-  color: linear-gradient(#3670A0, #3C83BC); /* Standard syntax */
   color: #3670A0;
   text-shadow: 0 1px #FFFFFF;
   text-transform: lowercase;
@@ -42,6 +40,8 @@ nav{
   border-width: 1px 0;
   border-style: solid;
   border-color: #717171;
+  width:100%;
+  position:static;
 }
 
 nav a{
@@ -59,7 +59,7 @@ nav div a:first-child{
   padding-left: 10px;
 }
 
-section{
+section, #legend{
   color:#717171;
   padding: 50px;
   margin: 50px auto;
@@ -67,7 +67,7 @@ section{
   border: 1px solid #EEEEEE;
   border-radius: 5px;
   box-shadow: 0px 0px 20px 3px #D3D3D3;
-  max-width: 1000px;
+  max-width: 980px;
 }
 
 
@@ -75,7 +75,6 @@ section h1{
   border-bottom: 1px solid #EEEEEE;
   font-size: 50px;
   margin: 0px;
-  
 }
 
 section p{
@@ -92,6 +91,15 @@ figcaption{
   border-top: 1px solid #EEEEEE;
   padding: 10px;
   margin: 10px;
+}
+
+
+.time{
+  float:right;
+}
+
+.content-right{
+  width:100%;
 }
 
 .main-left{
@@ -148,6 +156,7 @@ td img{
   display: inline-block;
   background-color: #E9E9E9;
   border: 1px solid #717171;
+  border-radius: 5px;
   margin-left: 5%;
   padding: 0px 5px;
   font-weight: 900;
@@ -189,14 +198,24 @@ footer h1{
   font-size: 15px;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1420px){
+  #legend{
+    display:none;
+  }
+}
+
+@media (max-width: 980px){
   section{
     border: none;
     box-shadow: none;
   }
+  .content-right{
+    width:100%;
+    margin-left:0;
+  }
 }
 
-@media (max-width: 800px){
+@media (max-width: 600px){
   header p{
     display: none;
   }
