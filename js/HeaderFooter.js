@@ -1,5 +1,5 @@
 
-define(["./Utils"],function(Utils){
+define(["jquery", "./Utils"],function($, Utils){
   var HeaderFooter = function(body){
     this.init(body);
   }
@@ -22,6 +22,7 @@ define(["./Utils"],function(Utils){
                             + '     <a href="./chameleon.html">Chameleon</a>'
                             + '     <a href="./mako.html">Mako</a>'
                             + '   </div>'
+                            + '   <div id="sessionProgressbar"><div class="progress-label"></div></div>'
                             + '</nav>'  
               
       this.FOOTER_CONTENT = ''
@@ -56,7 +57,7 @@ define(["./Utils"],function(Utils){
     },
     
     navBarScroll: function(evt){
-        var scroll = document.documentElement.scrollTop; 
+        var scroll = document.body.scrollTop;
         if(scroll < 95){
           this.nav.style.cssText = '';
         }

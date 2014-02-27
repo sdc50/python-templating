@@ -59,6 +59,26 @@ nav div a:first-child{
   padding-left: 10px;
 }
 
+#sessionProgressbar{
+  height: 2px;
+}
+
+.ui-progressbar {
+  position: relative;
+  border: none;
+}
+#sessionProgressbar .ui-progressbar-value{
+  background: #3670A0;
+}
+.progress-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #3670A0;
+  font-size: 8px;
+  font-weight: bold;
+}
+
 section, #legend{
   color:#717171;
   padding: 50px;
@@ -91,11 +111,6 @@ figcaption{
   border-top: 1px solid #EEEEEE;
   padding: 10px;
   margin: 10px;
-}
-
-
-.time{
-  float:right;
 }
 
 .content-right{
